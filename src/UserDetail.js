@@ -34,13 +34,22 @@ class UserDetail extends Component {
       <div>
         <Header text="Person" showBackLink />
         <div style={{ margin: 30, display: "flex" }}>
-          <div style={{ marginRight: 20, alignSelf: "center" }}>
-            <img
-              src={avatar_url}
-              alt={name}
-              className="img-circle"
-              style={{ width: 40, height: 40 }}
-            />
+          <div
+            style={{
+              marginRight: 20,
+              alignSelf: "center",
+              width: 40,
+              height: 40
+            }}
+          >
+            {avatar_url && (
+              <img
+                src={avatar_url}
+                alt={name}
+                className="img-circle"
+                style={{ width: 40, height: 40 }}
+              />
+            )}
           </div>
           <div
             style={{
