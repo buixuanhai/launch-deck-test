@@ -32,7 +32,7 @@ class UserDetail extends Component {
     const { avatar_url, name, location } = this.state;
     return (
       <div>
-        <Header text="Person" />
+        <Header text="Person" showBackLink />
         <div style={{ margin: 30, display: "flex" }}>
           <div style={{ marginRight: 20, alignSelf: "center" }}>
             <img

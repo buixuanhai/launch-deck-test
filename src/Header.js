@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = ({ text = "Home", backLink = "/" }) => {
+const Header = ({ text = "Home", backLink = "/", showBackLink = false }) => {
   return (
     <div
       style={{
@@ -16,9 +16,11 @@ const Header = ({ text = "Home", backLink = "/" }) => {
       }}
     >
       <div style={{ flex: 1, paddingBottom: 10 }}>
-        <Link to={backLink} style={{ color: "#fff" }}>
-          &lt; Back
-        </Link>
+        {showBackLink && (
+          <Link to={backLink} style={{ color: "#fff" }}>
+            <i className="fa fa-chevron-left" /> Back
+          </Link>
+        )}
       </div>
       <div style={{ flex: 1 }}>
         <p className="text-center">{text}</p>
